@@ -19,3 +19,39 @@ Also, *you* get to chose whether you want an HTML mockup in
 which controller functions event annotations (TBD) are attached, *or*,
 if you want the view/template to be provide by the controller function,
 "component" style.  It's up to you!
+
+## Why yet another JS library / framework?
+
+Google and Facebook have both a lot of resources, and very large scaling challenges.
+Most little applications / prototypes do not.
+Most of use are simply trying to stand up something quickly,
+with some emphasis on it still working correctly
+as well as being able to come back to it after 6 months and still
+make sense of it without too much effort.
+
+Gator is not going to try to solve the world's problems, just a few common ones.
+I expect you will still be using jQuery (or other libraries) directly here and there at times,
+and that's OK.
+I don't want a framework with a massive amount of detail for the newbie to learn,
+nor with a massive tooling debt.
+If you want to include a Node back-end process, great.
+If you want to just include a few scripts at the top of your utility page
+and be done with things, that's fine, too.
+
+I mentioned Redux earlier.  I like that approach.
+I'm not very fond of the React mutable component class approach.
+Over the last 10 years,
+I have become less enamored by the "Simula 67" (which begat C++, which begat Java...) approach,
+and more interested in the Lisp/Scheme approach, 
+since we have good garbage collected platforms now (unlike back in the 80s).
+
+Some approaches to be embraced in Gator:
+* Avoid transpiling
+  * Again, keep a light touch.  Even JS 5.1 is quite powerful.  (TBD - use some ES2015 features???)
+* Higher order functions
+  * Avoid classes for APIs with a single public method.
+  * Partial function application
+* Dynamic values - property lists as objects.
+  * Still immutable, though.
+  * IDEs are good at type inference - exploit that.
+* TODO - finish this list
