@@ -73,5 +73,18 @@ Also, Javascript object literals do a fine job of emulating named parameters in 
   an object to map controller names to implementing functions.  
   Signature and operation of such functions to be discussed below.
 
+## Controller function operation
 
+Controller functions are called by Gator when there is an event 
+related to the portion of the page which the controller is responsible.  
+The controller receives a state object (a data model, plus other items TBD) and the event.  
+The controller can return null/undefined, 
+in which case Gator will process the event.  
+Or, the controller can return a (new?) state object, 
+in which case Gator will assume that the controller has dealt with the event.
+Also, the controller can return a list consisting of
+a state object, or not (delegating handling of the original event), 
+and one or more events to be processed by Gator 
+(which then may or may not be delegated to other controllers).
 
+Yes, that's a bit abstract.  TBD - a few concrete examples.
