@@ -24,7 +24,7 @@ if you want the view/template to be provide by the controller function,
 
 Google and Facebook have both a lot of resources, and very large scaling challenges.
 Most little applications / prototypes do not.
-Most of use are simply trying to stand up something quickly,
+Most of us are simply trying to stand up something quickly,
 with some emphasis on it still working correctly
 as well as being able to come back to it after 6 months and still
 make sense of it without too much effort.
@@ -55,3 +55,23 @@ Some approaches to be embraced in Gator:
   * Still immutable, though.
   * IDEs are good at type inference - exploit that.
 * TODO - finish this list
+
+TODO - clean up inconsistency and hypocrisy when this thing starts to actually take form :-)
+
+
+## Component setup workflow
+
+* Make an HTML "mockup" page
+* Load the library scripts in your page
+* Load your application script(s) in your page 
+(assuming your scripting is not in the page itself - not recommended)
+* Call gt.start() with a parameter object.
+Pass a single object to allow future optional parameters.
+Also, Javascript object literals do a fine job of emulating named parameters in other languages.
+  * Configuration property value object - TBD (e.g. - enable/disable event debug tracing)
+  * Controller interface object -
+  an object to map controller names to implementing functions.  
+  Signature and operation of such functions to be discussed below.
+
+
+
